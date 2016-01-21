@@ -6,21 +6,6 @@
 import json
 import urllib
 
-# Superscripts in unicode
-# https://en.wikipedia.org/wiki/Unicode_subscripts_and_superscripts
-# CTRL+v u xxxx
-# 0 u+2070 eg. Trace⁰
-# i u+2071 eg. Traceⁱ
-# 1 u+00B9 eg. Trace¹
-# 2 u+00B2 eg. Trace²
-# 3 u+00B3 eg. Trace³
-# 4 u+2074 eg. Trace⁴
-# 5 u+2075 eg. Trace⁵
-# 6 u+2076 eg. Trace⁶
-# 7 u+2077 eg. Trace⁷
-# 8 u+2078 eg. Trace⁸
-# 9 u+2079 eg. Trace⁹
-
 decklist_base_url = "http://netrunnerdb.com/api/decklist/"
 card_base_url = "http://netrunnerdb.com/api/card/"
 allcards_base_url = "http://netrunnerdb.com/api/cards/"
@@ -57,6 +42,14 @@ def get_card_info(card_id):
     #print " Cost:" + str(card_json[0]['cost'])
     print " Text:" + card_json[0]['text']
 
+def parse_all_cards():
+    with open('all_cards.json') as data_file:
+        all_cards = json.load(data_file)
+
+    for card in all_cards:
+        #print card
+        print "Title:" + card['title']
+
 #print deckdata_json['cards']
 
 #for card in deckdata_json['cards']:
@@ -65,6 +58,7 @@ def get_card_info(card_id):
 
 #get_card_name("01002")
 #get_card_info("01002")
-get_card_info("02020")
-get_card_info("02046")
-get_card_info("01036")
+#get_card_info("02020")
+#get_card_info("02046")
+#get_card_info("01036")
+parse_all_cards()

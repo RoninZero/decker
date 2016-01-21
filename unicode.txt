@@ -1,0 +1,16 @@
+# Superscripts in unicode
+# https://en.wikipedia.org/wiki/Unicode_subscripts_and_superscripts
+# CTRL+v u xxxx
+# 0 u+2070 eg. Trace⁰
+# i u+2071 eg. Traceⁱ
+# 1 u+00B9 eg. Trace¹
+# 2 u+00B2 eg. Trace²
+# 3 u+00B3 eg. Trace³
+# 4 u+2074 eg. Trace⁴
+# 5 u+2075 eg. Trace⁵
+# 6 u+2076 eg. Trace⁶
+# 7 u+2077 eg. Trace⁷
+# 8 u+2078 eg. Trace⁸
+# 9 u+2079 eg. Trace⁹
+
+
