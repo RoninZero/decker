@@ -47,8 +47,19 @@ def parse_all_cards():
         all_cards = json.load(data_file)
 
     for card in all_cards:
-        #print card
-        print "Title:" + card['title']
+        print card
+        all_keys = []
+        #print "Title:" + card['title'] + "Keys:" + str(card.keys())
+        for key, value in card.items():
+            #print "key:", key.encode('utf-8'), "value:", value.encode('utf-8')
+            try:
+                print "key:", str(key), "value:", str(value) #fails on unicode error
+            except Exception as e:
+                print e
+            if key not in all_keys:
+                all_keys.append(key)
+        print all_keys
+
 
 #print deckdata_json['cards']
 
