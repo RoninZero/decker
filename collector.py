@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 # API testing for netrunnerdb.com
 # api info can be obtiained here http://netrunnerdb.com/en/apidoc
